@@ -1,5 +1,5 @@
 1.    Menampilkan data member yang berada pada provinsi sumatera utara dan dalam satu kabupaten
-
+SELECT * FROM mst_member WHERE id_kabupaten IN (SELECT kode_kabupaten FROM mst_kabupaten WHERE kode_provinsi = (SELECT kode_provinsi FROM mst_provinsi WHERE nama_provinsi = “SUMATERA UTARA”));
 2.    Menampilkan data provinsi yang tidak ada dalam data member 
 SELECT * FROM mst_provinsi WHERE kode_provinsi NOT IN (SELECT id_provinsi FROM mst_member);
 3.    Menampilkan data kabupaten yang tidak ada dalam data member
