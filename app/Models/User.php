@@ -16,20 +16,20 @@ class User extends Authenticatable
         'id'
     ];
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+    // public function getRouteKeyName()
+    // {
+    //     return 'slug';
+    // }
 
-    //Otomatis membuat slug
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'name'
-            ]
-        ];
-    }
+    // //Otomatis membuat slug
+    // public function sluggable(): array
+    // {
+    //     return [
+    //         'slug' => [
+    //             'source' => 'nama'
+    //         ]
+    //     ];
+    // }
 
     public function pendidikanTerakhir()
     {

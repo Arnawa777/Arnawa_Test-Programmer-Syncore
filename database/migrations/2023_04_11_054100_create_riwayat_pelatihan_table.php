@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('riwayat_pelatihan', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('nama_pelatihan');
             $table->string('penyelenggara');
             $table->integer('tahun_pelatihan');

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pendidikan_terakhir', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('jenjang_pendidikan');
             $table->string('nama_sekolah');
             $table->integer('tahun_lulus');
